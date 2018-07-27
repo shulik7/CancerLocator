@@ -14,8 +14,8 @@ java -jar CancerLocator.jar config_file
     
     Options in the configuration file:
     trainFile: the traning file, only methylation values needed
-    testMethyFile: the testing file with methylation values
-    testDepthFile: the testing file with number of CpG measurements for each cluster
+    testMethyFile: the testing file with the number of methylated CpGs on the reads aligned to each cluster
+    testDepthFile: the testing file with the number of CpG measurements for each cluster
     typeMappingFile: the file used to map sample types to prediction classes
     resultFile: the output file
     thetaStep: the interval of theta values used in the inference
@@ -32,7 +32,7 @@ _trainFile_:
     Each line represents a training sample. The first column is the sample type and the remaining columns are methylation values (beta values) of the features.  
 
 _testMethyFile_:  
-    Each line represents a training sample. The first column is the sample ID and the remaining columns are methylation levels (beta values) of the features.
+    Each line represents a training sample. The first column is the sample ID and the remaining columns are methylated CpGs on reads aligned to these clusters.
 
 _testDepthFile_:  
     Each line represents a training sample. The first column is the sample ID and the remaining columns are CpG counts on reads aligned to these clusters.
